@@ -2,6 +2,7 @@
 - name: Change user password with today's date appended
   hosts: all
   become: true
+  gather_facts: false
   vars:
     username: "exampleuser"
     base_password: "mypassword"
