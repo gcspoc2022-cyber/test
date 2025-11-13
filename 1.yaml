@@ -7,6 +7,7 @@
     base_password: "mypassword"
     date_str: "{{ now(fmt='%Y%m%d') }}"
     new_password: "{{ base_password + date_str }}"
+    ansible_python_interpreter: /usr/bin/python3
   tasks:
     - name: Change password for user with appended date
       ansible.builtin.user:
